@@ -13,7 +13,7 @@ app.prepare().then(() => {
     await next()
   })
 
-  server.use(require("routes/index").routes());
+  server.use(require("./routes/index").routes());
 
   server.listen(port, (err) => {
     if (err) throw err
