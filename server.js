@@ -9,12 +9,7 @@ const port = parseInt(process.env.PORT, 10) || 3000
 const koaApp = new Koa()
 const server = http.createServer(koaApp.callback());
 const io = socketio(server)
-
-module.exports = {
-  koaApp,
-  server,
-  socketIO: io,
-}
+const connections = require("./connections.js")
 
 app.prepare().then(() => {
 
@@ -23,8 +18,19 @@ app.prepare().then(() => {
     await next()
   })
 
+  // apply our routes
   koaApp.use(require("./routes/index").routes());
+
+  // apply our websocket connection listeners
+  connections.listen(io)
 
   server.listen(port);
 
 })
+
+
+module.exports = {
+  koaApp,
+  server,
+  socketIO: io,
+}
