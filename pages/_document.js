@@ -9,24 +9,24 @@ export default class MyDocument extends Document {
     return { html, head, errorHtml, chunks, styles }
   }
 
-          //<link href="https://fonts.googleapis.com/css?family=Arvo|Work+Sans" rel="stylesheet" />
   render() {
     return (
       <html>
         <Head>
-          <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Inconsolata|Oxygen" rel="stylesheet" />
+
           <style>{`
             html {
-              font-size: 16px;
+              font-size: 18px;
               line-height: 1.2em;
-              font-family: Work Sans, Source Sans Pro, sans-serif;
             }
             body {
+              font-family: Oxygen, Source Sans Pro, sans-serif;
               font-size: 1rem;
               margin: 0 0;
               padding: 0 0;
-              color: #576F7A;
-              background-color: #f2f2f6;
+              color: #666;
+              background-color: #fafaff;
             }
             h1,
             h2,
@@ -39,6 +39,7 @@ export default class MyDocument extends Document {
               line-height: 1.2em;
               margin-bottom: 1rem;
               font-weight: 200;
+              font-family: Inconsolata, Oxygen, Merriweather, sans-serif;
             }
             h1 {
               font-size: 3em;
