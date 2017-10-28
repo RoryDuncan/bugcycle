@@ -9,7 +9,6 @@ const Layout = (props) => (
       width: 60rem;
       padding: 1rem 1rem;
       margin: 2rem auto;
-      background-color: #fff;
     }
 
     `}</style>

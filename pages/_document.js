@@ -1,6 +1,7 @@
 // ./pages/_document.js
 import Document, { Head, Main, NextScript } from 'next/document'
 import flush from 'styled-jsx/server'
+import {Font, theme, colors, typography} from '../design/theme'
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -13,20 +14,19 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link href="https://fonts.googleapis.com/css?family=Inconsolata|Oxygen" rel="stylesheet" />
-
+          <Font />
           <style>{`
             html {
               font-size: 18px;
               line-height: 1.2em;
             }
             body {
-              font-family: Oxygen, Source Sans Pro, sans-serif;
+              font-family: ${typography.body}, sans-serif;
               font-size: 1rem;
               margin: 0 0;
               padding: 0 0;
-              color: #666;
-              background-color: #fafaff;
+              color: ${theme.body};
+              background-color: ${theme.background};
             }
             h1,
             h2,
@@ -34,12 +34,12 @@ export default class MyDocument extends Document {
             h4,
             h5 {
               text-transform: capitalize;
-              color: #2C3A43;
+              color: ${theme.headings};
               margin: 0 0;
               line-height: 1.2em;
               margin-bottom: 1rem;
               font-weight: 200;
-              font-family: Inconsolata, Oxygen, Merriweather, sans-serif;
+              font-family: ${typography.header};
             }
             h1 {
               font-size: 3em;
