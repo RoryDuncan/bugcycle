@@ -4,7 +4,7 @@ import Header from "./Header"
 
 const Layout = (props) => (
   <div>
-    { props.isAuthenticated ? <Header title="Bug Cycle"></Header> : null}
+    { props.isAuthenticated ? <Header title={props.title}></Header> : null}
     <div className="container">
       <content>{props.children}</content>
     </div>
