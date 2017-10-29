@@ -4,22 +4,28 @@ export const colors = {
   tango: "#e2492f",
   mimosa: "#efc050",
   turquoise: "#33b4b0",
-  vanilla: "#ffeac7",
   gray: "#f2f2f2",
+  midGray: "#A2ABB5",
   agate: "#b4b5aa",
   shale: "#67696c",
 }
 
 export const theme = {
+
   body: colors.shale,
   background: colors.white,
   headings: colors.mimosa,
+
+  navigator: {
+    background: colors.gray,
+    color: colors.shale,
+  },
 }
 
 
 // this could be more robust, but tmw right now
 const families = [
-  "Inconsolata",
+  "Share Tech Mono",
   "Roboto Slab",
 ];
 

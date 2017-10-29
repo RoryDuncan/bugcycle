@@ -1,15 +1,19 @@
-
+import React from "react"
+import Link from "next/link"
+import Header from "./Header"
 
 const Layout = (props) => (
-  <div className="container">
-    {props.children}
+  <div>
+    { props.isAuthenticated ? <Header title="Bug Cycle"></Header> : null}
+    <div className="container">
+      <content>{props.children}</content>
+    </div>
     <style jsx>{`
 
-    .container {
-      width: 60rem;
-      padding: 1rem 1rem;
-      margin: 2rem auto;
-    }
+      content {
+        display: block;
+        padding-top: 6rem;
+      }
 
     `}</style>
   </div>

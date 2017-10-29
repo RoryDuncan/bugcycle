@@ -60,6 +60,12 @@ export default class MyDocument extends Document {
               color: #A74F2D;
               text-decoration: none;
             }
+
+            .container {
+              width: 60rem;
+              margin: auto auto;
+            }
+
           `}
           </style>
         </Head>
