@@ -16,16 +16,20 @@ export const theme = {
   background: colors.white,
   headings: colors.mimosa,
 
-  navigator: {
-    background: colors.gray,
+  sidebar: {
+    background: colors.white,
     color: colors.shale,
+    item: {
+      background: colors.white,
+      color: colors.turquoise,
+    }
   },
 }
 
 
 // this could be more robust, but tmw right now
 const families = [
-  "Share Tech Mono",
+  "Noto Sans",
   "Roboto Slab",
 ];
 

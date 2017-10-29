@@ -1,10 +1,10 @@
 import React from "react"
 import Link from "next/link"
-import Header from "./Header"
+import Sidebar from "./Sidebar"
 
-const Layout = (props) => (
+export const Layout = (props) => (
   <div>
-    { props.isAuthenticated ? <Header title={props.title}></Header> : null}
+    <Sidebar title={props.title} />
     <div className="container">
       <content>{props.children}</content>
     </div>
@@ -19,5 +19,4 @@ const Layout = (props) => (
   </div>
 )
 
-
-export default Layout;
+export default Layout

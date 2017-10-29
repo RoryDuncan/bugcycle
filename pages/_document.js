@@ -59,6 +59,7 @@ export default class MyDocument extends Document {
             a {
               color: #A74F2D;
               text-decoration: none;
+              cursor: pointer;
             }
 
             .container {
