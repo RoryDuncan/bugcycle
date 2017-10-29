@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/RoryDuncan/bugcycle#readme",
   "dependencies": {
+    "firebase": "^4.6.0",
     "koa": "^2.3.0",
     "koa-router": "^7.2.1",
     "next": "^4.1.3",
